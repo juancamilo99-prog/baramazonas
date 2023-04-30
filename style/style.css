@@ -1,0 +1,424 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header */
+
+header{
+    height: 100px;
+    background: #377335;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 200;
+}
+
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.show-menu,
+.hide-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.show-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.show-menu:hover,
+.hide-menu:hover{
+    color: red;
+}
+
+#check{
+    display: none;
+}
+
+/* banner */
+#banner{
+    padding: 0 50px;
+    background-image: url(./images/img.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before{
+    content: '';
+    background: rgb(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+.boton-begin{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #377335;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+
+.boton-begin:hover{
+    background: #377335;
+}
+
+/* info */
+
+.info {
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-1 {
+    width: 300px;
+    padding: 15px 25px;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.info-1 img {
+    width: 35px;
+}
+
+.info-1 h3 {
+    font-size: 18px;
+    color: #377335;
+    margin-bottom: 10px;
+}
+
+.info-1 p {
+    font-size: 16px;
+    color: #000;
+}
+
+.nosotros {
+    position: relative;
+}
+
+.bg-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    z-index: -1;
+}
+
+.nosotros-info {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.nosotros-img {
+    width: 50%;
+}
+
+.nosotros-img img {
+    width: 650px;
+}
+
+.nosotros-txt {
+    width: 50%;
+}
+
+.nosotros-txt span {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.nosotros-txt h2 {
+    font-size: 45px;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.nosotros-txt p {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.btn-1 {
+    display: inline-block;
+    background-color: #377335;
+    padding: 13px 30px;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+}
+
+.btn-1:hover{
+    background-color: #235722;
+}
+
+
+/*carta menu*/
+
+.wrap {
+    max-width: 1200px;
+    margin: 25px 30px;
+}
+
+.column-2.carta {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.plato-carta{
+    display: flex;
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+}
+
+.plato-carta .alergeno img{
+    padding: 10px 2px;
+    width: 40px;
+    height: 40px;
+}
+
+.title-plato-carta {
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    border-top: none;
+    flex-basis: 60%;
+    padding: 0 1rem;
+}
+
+.title-plato-carta h4{
+    padding: 10px;
+}
+
+.precio-plato-carta{
+    display: flex;
+    flex-basis: 60%;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+/*footer*/
+
+hr {
+    border: 1px solid #EEE;
+}
+
+.footer {
+    padding: 50px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+}
+
+.link h3 {
+    font-size: 20px;
+    color: #377335;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.socials img {
+    margin-right: 15px;
+}
+
+
+/* responsive */
+
+@media(max-width: 768px){
+    /*header*/
+    .show-menu,
+    .hide-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #377335;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 8px;
+    }
+
+    .hide-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    .contenido-banner h3{
+        font-size: 15px;
+        font-weight: 400px;
+        padding: 50px 0px;
+    }
+
+    .boton-begin{
+        padding: 10px 40px;
+    }
+
+    .column-2.carta{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media(min-width: 768px){
+    /*header*/
+    .show-menu,
+    .hide-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #377335;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 8px;
+    }
+
+    .hide-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
+@media(max-width: 991px) {
+    
+    .info {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-1 {
+        margin-bottom: 20px;
+    }
+
+    .nosotros{
+        padding: 30px;
+    }
+
+    .bg-2 {
+        top: 80px;
+        width: 200px;
+    }
+
+    .nosotros-info{
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nosotros-img{
+        width: 100%;
+    }
+
+    .nosotros-img img {
+        width: 300px;
+    }
+
+    .nosotros-txt{
+        width: 100%;
+    }
+
+    .nosotros-txt h2{
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .nosotros-txt p {
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socials {
+        margin-bottom: 25px;
+    }
+}
